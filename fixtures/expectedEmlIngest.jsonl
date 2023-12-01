@@ -1,0 +1,2 @@
+{"From":"alice@local.net","To":"bob@local.net","Date":"Thu, 16 Jan 2020 18:40:05 +0000","Subject":"test 1"}
+{"From":"bob@local.net","To":"alice@local.net","Date":"Mon, 20 Jan 2020 18:40:05 +0000","Subject":"test 2"}

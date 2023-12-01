@@ -1,0 +1,19 @@
+From: alice@local.net
+To: bob@local.net
+Cc: madhatter@local.net
+Bcc: trudy@local.net
+Date: Thu, 16 Jan 2020 18:40:05 +0000
+Subject: test 1
+Thread-Topic:: test 1
+Message-ID: 123.PROD.OUTLOOK.COM
+In-Reply-To: 123.PROD.OUTLOOK.COM
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach: yes
+Content-Type: text/plain
+
+Here is some additional stuff that we might want to track:
+
+Participant domains
+Sender domain
+Recipient domains
