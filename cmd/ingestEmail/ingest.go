@@ -1,4 +1,4 @@
-package main
+package ingestemail
 
 import (
 	"context"
@@ -12,6 +12,10 @@ import (
 	"path/filepath"
 	"strings"
 )
+
+type Email struct {
+	From, To, Date, Subject string
+}
 
 func ParseEml(emlStr string) (Email, error) {
 	r := strings.NewReader(emlStr)

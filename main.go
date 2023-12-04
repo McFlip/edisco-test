@@ -1,11 +1,11 @@
+/*
+Copyright © 2023 McFlip
+
+*/
 package main
 
-import "fmt"
-
-type Email struct {
-	From, To, Date, Subject string
-}
+import "github.com/McFlip/edisco-test/cmd"
 
 func main() {
-	fmt.Println("YOLO")
+	cmd.Execute()
 }
