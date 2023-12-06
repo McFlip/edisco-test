@@ -30,6 +30,9 @@ func ParseEml(emlStr string) (Email, error) {
 	date := header.Get("Date")
 	subject := header.Get("Subject")
 
+	// clean up the date string so that in can be type-cast into a timestamp with timezone object in Postgres
+	date, _, _ = strings.Cut(date, " (")
+
 	myEmail := Email{
 		From:    from,
 		To:      to,
@@ -51,7 +54,12 @@ func Ingest(inDir, outFile string) error {
 		if err != nil {
 			log.Fatal(err)
 		}
-		if d.IsDir() || !strings.HasSuffix(d.Name(), ".eml") {
+		// NOTE: I'm only parsing email at first. ReadPST is able to output only email but files are just numbers with no extension.
+		// readpst -a ".fubar" -D -b -S -t e
+		// if d.IsDir() || !strings.HasSuffix(d.Name(), ".eml") {
+		// 	return nil
+		// }
+		if d.IsDir() {
 			return nil
 		}
 		emlBs, err := os.ReadFile(path)
